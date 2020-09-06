@@ -29,8 +29,8 @@ ws.on('connection', async(socket) => {
         userController(ws, socket, message);
         profileController(ws, socket, message);
           /*** Firecamp testing --**/
-        //   preloadUsers(socket);
-        //   preloadProfile(socket);
+          preloadUsers(socket);
+          preloadProfile(socket);
           /** --end --**/
 
     });
@@ -55,5 +55,6 @@ setInterval(() => {
   }, 10000);
   
 server.listen(Number(2500), () => {
-    console.log(`Server started on port ${JSON.stringify({server})}`);
+    console.log(`Server started on port ${JSON.stringify({server})} `);
 });
+
